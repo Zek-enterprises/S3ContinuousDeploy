@@ -9,7 +9,6 @@ jobs:
     working_directory: ~/tmp/S3ContinuousDeploy
     steps:
       - checkout
-    working_directory: ~/home/ubuntu
       - run: 
           apt-get update && apt-get install nginx -y    
       - run: 
