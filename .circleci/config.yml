@@ -11,8 +11,9 @@ jobs:
       - checkout
     hostname: Jfrog
     working_directory: ~/home/ubuntu
-      - run: |
+      - run: 
           apt-get update && apt-get install nginx -y    
+      - run: 
           pip install -y awscli
       - run: 
            aws s3 sync ~/home/ubuntu/S3ContinuousDeploy s3://s3awscirclecidemo --delete
