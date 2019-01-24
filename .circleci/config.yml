@@ -2,17 +2,18 @@ version: 2
 jobs:
   build:
     docker:
-      - image: bash:4.4.19
+      - image: circleci/awscli:latest
       #- image: circleci/redis:4.0
     #machine:
       #enabled: true
-    working_directory: root
+    working_directory: ~/tmp
     steps:
       - checkout
       - run:
-          name: install AWS CLI (first install pip, the Python package manager)
-          command: | 
-            apt-get update && apt-get install -y awscli 
+          apt-get update && apt-get install -y awscli
+          #name: install AWS CLI (first install pip, the Python package manager)
+          #command: | 
+            #apt-get update && apt-get install -y awscli 
             #apk add --update python python-dev py-pip build-base
             #pip install awscli
           #command: 'aws s3 sync https://github.com/toopukondabhaskar/S3ContinuousDeploy s3://s3awscirclecidemo --region us-east-1'
