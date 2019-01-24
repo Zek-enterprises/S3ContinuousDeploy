@@ -1,6 +1,9 @@
 version: 2
 jobs:
   build:
+    - image: circleci/python:2.0
+    #machine:
+      #enabled: true
     working_directory: ~/S3ContinuousDeploy
     steps:
       - checkout
