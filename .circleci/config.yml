@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/awscli:latest
+      - image: bash:4.4.19
       #- image: circleci/redis:4.0
     #machine:
       #enabled: true
