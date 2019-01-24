@@ -1,10 +1,11 @@
 version: 2
 jobs:
   build:
-    - image: circleci/python:2.0
+    docker:
+      - image: circleci/python:2.0
     #machine:
       #enabled: true
-    working_directory: ~/S3ContinuousDeploy
+    working_directory: tmp
     steps:
       - checkout
       - run:
