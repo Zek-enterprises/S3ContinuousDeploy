@@ -6,7 +6,7 @@ jobs:
       #- image: circleci/redis:4.0
     machine:
       enabled: true
-    working_directory: ~/tmp
+    working_directory: ~/tmp/S3ContinuousDeploy
     steps:
       - checkout
       - run:
@@ -16,7 +16,7 @@ jobs:
             #apt-get update && apt-get install -y awscli 
             #apk add --update python python-dev py-pip build-base
             #pip install awscli
-          command: 'aws s3 sync https://github.com/toopukondabhaskar/S3ContinuousDeploy s3://s3awscirclecidemo --delete'
+          command: 'aws s3 sync S3ContinuousDeploy s3://s3awscirclecidemo --delete'
   #deploy:
     #machine:
       #enabled: true
