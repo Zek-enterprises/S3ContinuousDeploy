@@ -14,7 +14,7 @@ jobs:
           command: pip install awscli
             #apk add --update python python-dev py-pip build-base
             #pip install awscli
-          command: 'aws s3 sync https://github.com/toopukondabhaskar/S3ContinuousDeploy s3://s3awscirclecidemo --delete'
+          command: 'aws s3 sync https://github.com/toopukondabhaskar/S3ContinuousDeploy s3://s3awscirclecidemo --region us-east-1'
   #deploy:
     #machine:
       #enabled: true
