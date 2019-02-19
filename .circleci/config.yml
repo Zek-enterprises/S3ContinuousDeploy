@@ -4,8 +4,8 @@ jobs:
     #docker:
       #- image: circleci/ruby:2.4
       #- image: circleci/redis:4.0
-    #machine:
-      #enabled: true
+    machine:
+      enabled: true
     working_directory: ~/tmp/S3ContinuousDeploy
     steps:
       - checkout
