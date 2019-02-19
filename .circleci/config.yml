@@ -1,8 +1,8 @@
 version: 2
 jobs:
-  build:
-    docker:
-      - image: circleci/ruby:2.4
+  deploy:
+    #docker:
+      #- image: circleci/ruby:2.4
       #- image: circleci/redis:4.0
     #machine:
       #enabled: true
