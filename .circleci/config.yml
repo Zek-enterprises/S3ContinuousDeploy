@@ -26,6 +26,11 @@ jobs:
             #apk add --update python python-dev py-pip build-base
             #pip install awscli
           #command: 'aws s3 sync S3ContinuousDeploy s3://s3awscirclecidemo --delete'
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
   #deploy:
     #machine:
       #enabled: true
