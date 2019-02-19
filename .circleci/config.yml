@@ -30,7 +30,7 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - build
+      - deploy
   #deploy:
     #machine:
       #enabled: true
