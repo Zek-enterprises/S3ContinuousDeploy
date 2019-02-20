@@ -24,7 +24,7 @@ jobs:
       - run:
           sudo pip install awscli
       - run:
-           aws s3 sync ~/tmp/zipped_dir3.zip s3://s3awscirclecidemo --delete
+           aws s3 sync ~/tmp/S3ContinuousDeploy/zipped_dir3.zip s3://s3awscirclecidemo --delete
 
 workflows:
   version: 2
