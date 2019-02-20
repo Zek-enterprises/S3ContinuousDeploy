@@ -6,7 +6,7 @@ jobs:
       #- image: circleci/redis:4.0
     #machine:
       #enabled: true
-    #working_directory: ~/tmp/S3ContinuousDeploy
+    working_directory: ~/tmp/S3ContinuousDeploy
     steps:
       - checkout
       - run: cd ~/tmp/S3ContinuousDeploy/; zip -r ../zipped_dir3.zip *
