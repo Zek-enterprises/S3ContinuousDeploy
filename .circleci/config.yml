@@ -26,11 +26,15 @@ jobs:
       - run:
            aws s3 sync ~/tmp s3://s3awscirclecidemo --delete
   deployment:
-    staging:
-      branch: master
-      codedeploy:
-        circlecidemo:
-          deployment_group: sample
+    machine:
+      enabled: true
+    steps:
+      - checkout
+      staging:
+        branch: master
+        codedeploy:
+          circlecidemo:
+            deployment_group: sample
 workflows:
   version: 2
   workflow:
