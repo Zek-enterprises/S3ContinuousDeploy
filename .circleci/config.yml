@@ -26,6 +26,11 @@ jobs:
       - run:
            aws s3 sync ~/tmp s3://s3awscirclecidemo --delete
   deploy1:
+    machine:
+      enabled: true
+    #working_directory: ~/tmp/S3ContinuousDeploy
+    steps:
+      - checkout
     staging:
       branch: master
       codedeploy:
