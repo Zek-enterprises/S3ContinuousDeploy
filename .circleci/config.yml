@@ -25,12 +25,6 @@ jobs:
           sudo pip install awscli
       - run:
            aws s3 sync ~/tmp s3://s3awscirclecidemo --delete
-  deploy1:
-    machine:
-      enabled: true
-    #working_directory: ~/tmp/S3ContinuousDeploy
-    #steps:
-      #- checkout
     staging:
       branch: master
       codedeploy:
@@ -44,13 +38,32 @@ jobs:
               key_pattern: circlecidemo-{SHORT_COMMIT}-{BUILD_NUM}
           deployment_group: sample
           deployment_config: CodeDeployDefault.OneAtATime
+  #deploy1:
+    #machine:
+      #enabled: true
+    #working_directory: ~/tmp/S3ContinuousDeploy
+    #steps:
+      #- checkout
+    #staging:
+      #branch: master
+      #codedeploy:
+        #circlecidemo:
+          #application_root: /
+          #region: us-east-1
+          #revision_location:
+            #revision_type: S3
+            #s3_location:
+              #bucket: s3awscirclecidemo
+              #key_pattern: circlecidemo-{SHORT_COMMIT}-{BUILD_NUM}
+          #deployment_group: sample
+          #deployment_config: CodeDeployDefault.OneAtATime
 workflows:
   version: 2
   workflow:
     jobs:
       - build
       - deploy
-      - deploy1
+
   #deploy:
     #machine:
       #enabled: true
