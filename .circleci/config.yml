@@ -29,8 +29,8 @@ jobs:
     machine:
       enabled: true
     #working_directory: ~/tmp/S3ContinuousDeploy
-    steps:
-      - checkout
+    #steps:
+      #- checkout
     staging:
       branch: master
       codedeploy:
