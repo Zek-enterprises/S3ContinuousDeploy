@@ -25,9 +25,11 @@ jobs:
           sudo pip install awscli
       - run:
            aws s3 sync ~/tmp s3://s3awscirclecidemo --delete
-    codedeploy:
-      circlecidemo:
-        deployment_group: sample
+      - code-deploy/deploy-bundle:
+          application-name: circlecidemo
+          deployment-group: sample
+          bundle-bucket: s3awscirclecidemo
+          bundle-key: zipped_dir3.zip
 workflows:
   version: 2
   workflow:
