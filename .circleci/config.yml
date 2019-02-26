@@ -39,7 +39,7 @@ workflows:
     jobs:
       - build
       - compress
-      - deployment
+      - deploy
 
   #deploy:
     #machine:
