@@ -31,7 +31,7 @@ jobs:
     steps:
       - run:
           command: |
-            - bash vendor/bin/aws-code-deploy.sh
+            - bash vendor/bin/awscodedeploy.sh
 workflows:
   version: 2
   workflow:
