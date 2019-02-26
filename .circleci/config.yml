@@ -32,7 +32,7 @@ jobs:
     steps:
       - checkout
       - commands: 
-          - bash vendor/bin/awscodedeploy.sh
+          bash vendor/bin/awscodedeploy.sh
 workflows:
   version: 2
   workflow:
