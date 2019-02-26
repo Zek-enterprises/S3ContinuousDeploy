@@ -30,8 +30,9 @@ jobs:
       enabled: true
     working_directory: ~/tmp/S3ContinuousDeploy
     steps:
-      commands: 
-        - bash vendor/bin/awscodedeploy.sh
+      - checkout
+      - commands: 
+          - bash vendor/bin/awscodedeploy.sh
 workflows:
   version: 2
   workflow:
