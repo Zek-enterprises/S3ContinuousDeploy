@@ -28,10 +28,10 @@ jobs:
   deploy:
     machine:
       enabled: true
-    staging:
-      branch: master
-      commands:
-        - bash vendor/bin/aws-code-deploy.sh
+    steps:
+      - run:
+          command: |
+            - bash vendor/bin/aws-code-deploy.sh
 workflows:
   version: 2
   workflow:
