@@ -32,7 +32,10 @@ jobs:
     steps:
     - checkout
     - run: 
-        command: 
+        command: |
+          echo $aws_access_key_id
+          echo $secret_key_id
+          echo $region
           bash vendor/bin/awscodedeploy.sh
 workflows:
   version: 2
