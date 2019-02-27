@@ -21,11 +21,13 @@ jobs:
           command: |
             cd ~/tmp/S3ContinuousDeploy/; zip -r ../zipped_dir3.zip *
             sudo apt-get update && sudo apt-get install nginx -y
-            bash vendor/bin/awscodedeploy.sh
+            #bash vendor/bin/awscodedeploy.sh
       - run:
           sudo pip install awscli
       - run:
            aws s3 sync ~/tmp s3://s3awscirclecidemo --delete
+      - run:
+          bash vendor/bin/awscodedeploy.sh
   #deploy:
     #machine:
       #enabled: true
