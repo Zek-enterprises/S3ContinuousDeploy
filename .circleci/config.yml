@@ -34,9 +34,9 @@ jobs:
     - run:
         command: |
           sudo pip install awscli
-          aws-access-key-id: $aws_access_key_id
-          aws-secret-access-key: $secret_key_id
-          region: $region
+          #aws-access-key-id: $aws_access_key_id
+          #aws-secret-access-key: $secret_key_id
+          #region: $region
           #echo $aws_access_key_id
           #echo $secret_key_id
           #echo $region
